@@ -1,0 +1,8 @@
+<script>
+function saveg(str){
+        var xhttp;
+        xhttp = new XMLHttpRequest();
+        xhttp.open("GET", "save.php?tosave="+str, true);
+        xhttp.send(); 
+}
+</script>
