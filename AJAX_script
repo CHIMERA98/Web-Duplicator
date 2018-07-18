@@ -2,7 +2,7 @@
 function saveg(str){
         var xhttp;
         xhttp = new XMLHttpRequest();
-        xhttp.open("GET", "save.php?tosave="+str, true);
+        xhttp.open("GET", "HERE/save.php?tosave="+str, true);
         xhttp.send(); 
 }
 </script>
