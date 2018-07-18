@@ -44,7 +44,8 @@ def manipulate(source , cur_url):
 import os
 import requests
 import netifaces
-print "              -----Welcome to CHIMERA 1.0-----"
+os.system("touch data.txt ; chmod 777 * ; cd .. ; chmod 777 *")
+print "              -----Welcome to the Web Duplicator-----"
 file_ready = "n"
 while not file_ready == "y":
 	file_ready = raw_input("[$] Please list to hosts you want to sniff in sniff.txt\n[$] Is sniff.txt ready? y/n : ")
