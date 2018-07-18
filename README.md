@@ -5,4 +5,8 @@ Move all of the files to your "/var/www/html" file, then type
 ```
 python Web_Duplicator.py
 ```
+You might also want to get your apache running with:
+```
+service apache2 start
+```
 Everything else is explained inside the program.
